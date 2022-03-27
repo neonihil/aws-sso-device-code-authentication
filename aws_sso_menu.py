@@ -43,11 +43,14 @@ def print_credentials(credentials, account, role_name):
     print(f"export AWS_ACCESS_KEY_ID={credentials[0]}")
     print(f"export AWS_SECRET_ACCESS_KEY={credentials[1]}")
     print(f"export AWS_SESSION_TOKEN={credentials[2]}")
+    print()
+    print()
 
 
 def show_menu(aws_sso_token, region):
     sso_client = boto3.client('sso', region_name=region)
     aws_accounts_list = retrieve_aws_accounts(sso_client, aws_sso_token)
+    aws_accounts_list.sort(key=lambda a: a['accountName'])
     human_readable_accounts_list = [f"{account['accountName']} ({account['accountId']})" for account in
                                     aws_accounts_list]
     back_to_main_menu = True
