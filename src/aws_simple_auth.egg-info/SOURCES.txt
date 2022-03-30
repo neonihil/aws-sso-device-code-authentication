@@ -1,0 +1,14 @@
+README.md
+setup.py
+src/aws_simple_auth/__init__.py
+src/aws_simple_auth/aws_sso_menu.py
+src/aws_simple_auth/cli.py
+src/aws_simple_auth/main.py
+src/aws_simple_auth/retrieve_aws_sso_token.py
+src/aws_simple_auth.egg-info/PKG-INFO
+src/aws_simple_auth.egg-info/SOURCES.txt
+src/aws_simple_auth.egg-info/dependency_links.txt
+src/aws_simple_auth.egg-info/entry_points.txt
+src/aws_simple_auth.egg-info/not-zip-safe
+src/aws_simple_auth.egg-info/requires.txt
+src/aws_simple_auth.egg-info/top_level.txt

@@ -1,9 +1,10 @@
 import os
 import time
 from datetime import datetime, timedelta
-import cli
-from aws_sso_menu import show_menu
-from retrieve_aws_sso_token import retrieve_aws_sso_token
+
+from . import cli
+from .aws_sso_menu import show_menu
+from .retrieve_aws_sso_token import retrieve_aws_sso_token
 
 SSO_TOKEN_TIMEOUT=timedelta(hours=10)
 
@@ -32,5 +33,6 @@ def main(args):
         print("You can keep creating more tokens, or press CTRL+C to exit.")
 
 
-if __name__ == "__main__":
+
+def cli_menu():
     main(cli.parser.parse_args())

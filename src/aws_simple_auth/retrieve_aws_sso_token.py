@@ -61,7 +61,7 @@ def retrieve_aws_sso_token(args):
     else:
         sso_oidc_client = boto3.client('sso-oidc', region_name=args.region)
         url, device_code, oidc_application = create_device_code_url(sso_oidc_client, args.start_url)
-        print(f"Device code URL: {url}")
+        print(f"Device code URL:\n\n{url}\n\n")
         aws_sso_token = await_user_prompt_validation(sso_oidc_client, oidc_application, device_code)
         print("Successfully retrieved AWS SSO token!")
 
