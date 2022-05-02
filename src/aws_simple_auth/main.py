@@ -6,7 +6,7 @@ from . import cli
 from .aws_sso_menu import show_menu
 from .retrieve_aws_sso_token import retrieve_aws_sso_token
 
-SSO_TOKEN_TIMEOUT=timedelta(hours=10)
+SSO_TOKEN_TIMEOUT=timedelta(hours=4)
 
 def main(args):
     aws_sso_token = None

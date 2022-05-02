@@ -30,3 +30,11 @@ export PACKAGE_VERSION=1.0.0
 token: deps
 	source ./activate && aws-simple-auth -u $(AWS_AUTH_SSO_URL) -r $(AWS_AUTH_REGION)
 
+# -----------------------------------------------------------------------------
+# tokennew
+# -----------------------------------------------------------------------------
+
+tokennew:
+	rm -f /home/dev/.aws/simpleauth-awstoken
+	make token
+
