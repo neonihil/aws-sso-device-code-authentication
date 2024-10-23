@@ -5,3 +5,4 @@ aws-config.mk
 dist/
 src/*.egg_info
 venv/
+.virtualenv
