@@ -5,7 +5,7 @@
 # package-note: This file is part of the Python General Package Format library
 # package-url: github.com/ultralightweight/gpf
 # licence: MIT <https://opensource.org/licenses/MIT>
-# file-version: 3.5
+# file-version: 3.6
 # supported: virtualenv, pytest
 # -----------------------------------------------------------------------------
 
@@ -103,7 +103,7 @@ $(PACKAGE_ENVIRONMENT_FILE):: Makefile
 	$(call checkenv-command,git)
 	$(call checkenv-command,python)
 	$(call checkenv-command,pip)
-	$(call checkenv-command,virtualenv)
+#	$(call checkenv-command,virtualenv)
 #	# $(call checkenv-command,wget)
 #	# $(call checkenv-command,docker)
 	$(call checkenv-validate)
@@ -135,7 +135,7 @@ clean:: cleanup
 # -----------------------------------------------------------------------------
 
 $(VIRTUALENV_HOME):: $(PACKAGE_ENVIRONMENT_FILE)
-	virtualenv --python $(PYTHON_VERSION) $@
+	python -m venv $@
 	ln -sf $(VIRTUALENV_ACTIVATE) activate
 	touch $@
 
