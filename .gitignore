@@ -3,6 +3,6 @@
 __pycache__/
 aws-config.mk
 dist/
-src/*.egg_info
+**/*.egg-info
 venv/
 .virtualenv
