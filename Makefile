@@ -35,6 +35,6 @@ token: deps
 # -----------------------------------------------------------------------------
 
 tokennew:
-	rm -f /home/dev/.aws/simpleauth-awstoken
+	rm -f ~/.aws/simpleauth-awstoken
 	make token
 
